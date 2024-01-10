@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  background: url(circle.jpeg) no-repeat;
+  background-size: 100% 100%;
+}
+
+.modal-container {
+  width: 70vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 28px;
+  gap: 32px;
+  border: 0;
+  border-radius: 8px;
+  /* backdrop-filter: blur(2px); */
+}
+.modal-container h1 {
+  font-size: 54px;
+}
+.modal-btn {
+  font-size: 20px;
+  background: linear-gradient(45deg, blue, red);
+  border: 1px solid teal;
+  color: white;
+  border-radius: 12px;
+  padding: 8px 20px;
+  cursor: pointer;
+}
+.modal-btn:hover {
+  background: teal;
+  color: black;
+}
+.modal-overlay {
+  position: fixed;
+  width: 100%;
+  min-height: 100vh;
+  background: rgba(73, 166, 233, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  visibility: hidden;
+  z-index: -1;
+}
+.open-modal {
+  visibility: visible;
+  z-index: 1;
+}
+.modal-content {
+  width: 60vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto;
+  background: whitesmoke;
+  border-radius: 12px;
+  border: 0;
+  padding: 0 8px 12px 12px;
+  z-index: -10;
+}
+.close-btn {
+  font-size: 32px;
+  font-weight: 900;
+  color: rgb(187, 37, 37);
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  transition: all 0.1s linear;
+  align-self: flex-end;
+}
+.close-btn:hover {
+  transform: rotate(360deg);
+  color: teal;
+}
+.text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+.text p {
+  text-align: center;
+  font-size: 14px;
+}
+
+/* Tablets */
+@media (min-width: 460px) and (max-width: 1280px) {
+  .modal-container h1 {
+    font-size: 46px;
+  }
+}
+/* Mobiles */
+@media (max-width: 460px) {
+  .modal-container {
+    width: 60vw;
+  }
+  .modal-container h1 {
+    font-size: 24px;
+  }
+  .modal-btn {
+    font-size: 16px;
+    border-radius: 8px;
+    padding: 8px 12px;
+  }
+}
